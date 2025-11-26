@@ -2,14 +2,120 @@
 <html lang="ja">
 	<head>
 		<meta charset="UTF-8">
-		<link rel="stylesheet" href="../css/style.css">
-		<title>Github Pages のハンズオン</title>
+		<title>PORTFOLIO</title>
+		<meta name="portfolio" content="portfolio">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		
+		<!-- リセットCSS -->
+        <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css">
+		
+		<!-- Googleフォント -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Philosopher&display=swap" rel="stylesheet">
+	
+		<!-- オリジナルCSS -->
+        <link rel="stylesheet" href="../css/style.css">
 	</head>
 
 	<body>
-		<h1>Github Pages のハンズオン</h1>
-		<p>
-		こんにちは。<br>こちらは<span class="githubpages">Github Pages</span>から公開されている Web ページです。
-		</p>
+		<div class="background_image"><!-- 背景画像を入れるクラス-->
+		<header class="page-header">
+			<h1 class="align-center">
+				MY PORTFOLIO
+			</h1>
+			<nav>
+				<ul class="main-nav">
+					<li><a href="#profile">PROFILE</a></li>
+					<li><a href="#skills">SKILLS</a></li>
+					<li><a href="#works">WORKS</a></li>
+					<li><a href="#contact">CONTACT</a></li>
+				</ul>
+			</nav>
+		</header>
+<!--		<h2 class="page-title font-english">Rock-solid stability with a heart full of gravity <br>- 揺るぎない安定感と、心のグラビティ -</h2>-->
+<!--		 ↑キャッチコピーを考えてみた（P188）が、要らなそうだったら消すこと -->
+<!--		 意味：落ち着きや安定性を強調した誉め言葉、「人を引きつける力」や「安定して人を支える力」というポジティブなイメージ -->
+		
+<!--		<div class="background_image"> 背景画像を入れるクラス-->
+			<main>
+				<section id="profile" class="profile box">
+					<h3>PROFILE</h3>
+					<div>
+						<p>名前：星川 詩音</p>
+						<p>学歴：高等学校卒</p>
+<!--						<p>年齢：21歳</p>-->
+						<p>経歴：前職退職後、アルバイトや旅行をし現在の企業に就職</p>
+						<p>
+							趣味：手筒花火 <!--<br>&nbsp;&nbsp;&nbsp;&nbsp;所属している団体がInstagramをやっているので是非見てみてください。-->
+						</p>
+						<p>キャッチコピー（人物像）：Rock-solid stability with a heart full of gravity <br>&nbsp;&nbsp;- 揺るぎない安定感と、心のグラビティ -</p>
+					</div>
+				</section>
+				
+				<section id="skills" class="skills box">
+					<h3>SKILLS</h3>
+<!--				<aside class="skills-all">-->
+					<div class="skill-box">
+						<h4>IT入門</h4>
+							<p>	ITパスポート：テクノロジ系
+								（基礎理論とアルゴリズム、コンピュータシステム、ハードウェア、ソフトウェア、データベース、ネットワーク、情報セキュリティ）
+							</p>
+					</div>
+					<div class="skill-box">
+						<h4>Java</h4>
+							<p>	基本構文（変数宣言、配列、条件分岐、繰り返し）<br>
+								独自構文（クラス、メソッド、継承、カプセル化）<br>
+								応用構文（コレクションフレームワーク、例外処理）<br>
+								コーディング規約の理解及び規約に沿った実装
+							</p>
+					</div>
+					<div class="skill-box">
+						<h4>Oracle</h4>
+							<p>	Oracleデータベース環境の構築<br>
+								SQLの基礎構文（select、insert、update、delete）の習得<br>
+								SQLの応用構文（集約、並び替え、結合、サブクエリ、シーケンス、正規化）の習得<br>
+								JDBCの理解と演習課題（社員管理システム）の実践
+							</p>		
+					</div>
+					<div class="skill-box">
+						<h4>HTML/CSS</h4>
+							<p>	Webアプリケーション構造、タグの種類、プロパティの種類
+								HTML/CSSを使用した実装
+								ポートフォリオの構築
+							</p>
+					</div>
+<!--				</aside>-->
+				</section>
+				
+				<section id="works" class="works box">
+					<h3>WORKS</h3>
+					<ul>
+						<li><a href="https://github.com/tobita-tomoya/consoleapp_team1">&nbsp;チーム開発演習</a></li>
+						<li><a href="https://github.com/Hoshikawan/daily-java/tree/main/java_training/src">&nbsp;練習問題（基礎）</a></li>
+						<li><a href="https://github.com/Hoshikawan/daily-java/tree/main/java_advanced_training/src">&nbsp;練習問題（応用）</a></li>
+						<li><a href="https://www.notion.so/_-287a43ae5583812abbc1ec06a9dc0f21?source=copy_link">&nbsp;ガンチャート（Notion）</a></li>
+					</ul>
+				</section>
+				
+				<section id="contact" class="box">
+					<h3>CONTACT</h3>
+					<form>
+						<label>氏名 ： <input type="text" name="name" placeholder="鈴木 三郎/Suzuki Saburou"></label><br>
+						<label>氏名（ふりがな） ： <input type="text" name="name" placeholder="すずき さぶろう"></label><br>
+						<label>メールアドレス ： <input type="text" name="male" placeholder="abc@de.fg"></label><br>
+						<label>お問い合わせ内容 ： <textarea name="contact" placeholder="○○のご連絡"></textarea></label><br>
+						<button type="submit">送信</button>
+					</form>
+				</section>
+			</main>
+<!--		</div>-->
+
+		<footer>
+			<div>
+				<small>all rights reserved 2025 &copy; Shion Hoshikawa</small>
+			</div>
+		</footer>
+		</div>
 	</body>
 </html>

@@ -1,6 +1,142 @@
 @charset "UTF-8";
 
-span.githubpages {
-color: #FF0000;
-font-weight: bold;
+/*共通部分*/
+html {
+	font-size: 100%;
+}
+body {
+	margin: 0;
+	font-family: "Hiragino Kaku Gothic ProN", "Hiragino Sans", "BIZ UDPGothic", sans-serif;
+	line-height: 1.7;
+	background: #f1eac3;
+	color: #222;
+}
+a {
+	text-decoration: none;
+}
+
+/* ヘッダー */
+.page-header {
+	background-image: radial-gradient(circle, #cc0000, #9d001b, #6a071f, #380e18, #000000);
+	padding: 2em 0.5em 0.5em 0.5em;
+	text-align: center;
+}
+
+/* ヘッダーの文字　レイアウト */
+.align-center {
+	text-align: center;
+	color: azure;
+}
+
+/*ヘッダーのaタグ */
+.main-nav {
+	display: flex;
+	justify-content: center;
+	gap: 2.5rem;
+	font-size: 1rem;
+	list-style: none;
+}
+.main-nav a {
+	color: azure;
+	padding: 0.5em 1em;
+}
+.main-nav a:hover {
+	color: #0bd;
+}
+
+/* main部分 */
+/* 背景画像 */
+.background_image {
+	background-image: url('../images/手筒花火_背面.JPG');
+	background-size: cover;
+	background-position: left bottom;
+	background-repeat: no-repeat;
+	/* 画像の色がはっきりしすぎて分かりずらかったので淡くした */
+	background-color: rgba(200, 200, 200, 0.5); /* 白で半透明 */
+	background-blend-mode: lighten; /* 背景色と画像を重ねる */
+}
+
+/* 各ボックス（大きな括りの方）に対するデザイン */
+.box {
+	background: #fff;
+	margin: 1.2em auto;
+	padding: 1.5em 1em;
+	max-width: 420px;
+	border-radius: 10px;
+	box-shadow: 0 3px 12px #aac4ce33;
+/*    ↑これは有ってもなくても良いが背景に画像を入れたときにあった方がいい気がする*/
+/*	max-width: 50vw;*/
+}
+
+/* SKILLSのJavaやOracle等に対してのボックス */
+.skill-box {
+/*  background: #eef4f7;*/
+/* ↑背景画像を入れたときにどうするか決めたい */
+	border-radius: 6px;
+	padding: 0.9em;
+	margin-bottom: 1em;
+	box-shadow: 0 2px 8px #aac4ce40;
+}
+
+/* WORKSリスト */
+.works ul {
+	padding-left: 1.2em;
+	margin: 0;
+	list-style-type: none;
+}
+.works li {
+	margin-bottom: 0.5em;
+/*  position: relative;*/
+/*  padding-left: 15px;*/
+}
+.works li:before {
+	content: "❖ "; /* ❖を挿入 */
+	display: inline-block;
+	width: 1em;
+	margin-left: -1em;
+	color: #334b51;
+}
+
+.works a {
+	color: #334b51;
+	display: inline-block;
+  /* ↑インライン要素(a:hover)の動き(scale)が鈍い時に使うと動きやすくなる */
+  transition: .5s;
+}
+.works a:hover {
+	color: #0bd;
+	translate: 10px;
+/*  transform: scale(1.1);*/
+}
+
+/* CONTACTリスト */
+input, textarea, button {
+	font-size: 1em;
+	border: 1px solid #bbb;
+	margin-top: 0.2em;
+}
+button{
+	padding: 0.2em 1em;
+	border-radius: 6px;
+	margin-top: 0.5em;
+	transition: .5s;
+}
+button:hover {
+	color: #0bd;
+}
+
+footer {
+	text-align: center;
+	font-size: 0.8em;
+	color: #fff;
+	background-image: radial-gradient(circle, #cc0000, #9d001b, #6a071f, #380e18, #000000);
+	padding: 1rem 0;
+}
+
+/* デスクトップ版 */
+@media (max-width: 620px) {
+	.box { max-width: 95vw; padding: 1.2em 0.2em; }
+/* ↑「Viewport Width」の略*/
+	.main-nav { flex-direction: column; gap: 0; }
+	.page-header h1 { font-size: 1.3em; }
 }
