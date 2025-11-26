@@ -8,16 +8,17 @@ body {
 	margin: 0;
 	font-family: "Hiragino Kaku Gothic ProN", "Hiragino Sans", "BIZ UDPGothic", sans-serif;
 	line-height: 1.7;
-	background: #f1eac3;
+/*	background-image: radial-gradient(circle, #dbedf0, #c1dbdb, #a8c9c4, #92b6ab, #80a491);*/
 	color: #222;
 }
 a {
 	text-decoration: none;
 }
 
+
 /* ヘッダー */
 .page-header {
-	background-image: radial-gradient(circle, #cc0000, #9d001b, #6a071f, #380e18, #000000);
+	background-image: radial-gradient(circle, #80a491, #96bbb9, #bad0d8, #e0e6ee, #ffffff);
 	padding: 2em 0.5em 0.5em 0.5em;
 	text-align: center;
 }
@@ -45,27 +46,60 @@ a {
 }
 
 /* main部分 */
-/* 背景画像 */
-.background_image {
-	background-image: url('../images/手筒花火_背面.JPG');
-	background-size: cover;
-	background-position: left bottom;
-	background-repeat: no-repeat;
-	/* 画像の色がはっきりしすぎて分かりずらかったので淡くした */
-	background-color: rgba(200, 200, 200, 0.5); /* 白で半透明 */
-	background-blend-mode: lighten; /* 背景色と画像を重ねる */
+/* 画像 */
+.theme {
+	margin: 1rem 1.5rem;
 }
+.profile_box {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 2rem;
+	margin: 2em 0;
+}
+.profile_body {
+background: #f8f8fb;
+	margin: 1em;
+	padding: 1.5em 1em;
+	border-radius: 10px;
+	box-shadow: 0 3px 12px #aac4ce33;
+}
+/*.photo_box {*/
+/*	flex: 1;*/
+/*	display: flex;*/
+/*	justify-content: center;*/
+/*	align-items: center;*/
+/*	max-width: 420px;*/
+/*}*/
+.photo_box img{
+	width: 320px;
+	max-width: 320px;
+	max-width: 100%;
+	object-fit: cover;
+	object-position: center;
+	border-radius: 10px;
+}
+
+/*.background_image {*/
+/*	background-image: url('../images/手筒花火_背面.JPG');*/
+/*	background-size: cover;*/
+/*	background-position: left bottom;*/
+/*	background-repeat: no-repeat;*/
+/*	 画像の色がはっきりしすぎて分かりずらかったので淡くした */
+/*	background-color: rgba(200, 200, 200, 0.5);  白で半透明 */
+/*	background-blend-mode: lighten;  背景色と画像を重ねる */
+/*}*/
 
 /* 各ボックス（大きな括りの方）に対するデザイン */
 .box {
-	background: #fff;
+	background: #f8f8fb;
 	margin: 1.2em auto;
 	padding: 1.5em 1em;
 	max-width: 420px;
 	border-radius: 10px;
 	box-shadow: 0 3px 12px #aac4ce33;
 /*    ↑これは有ってもなくても良いが背景に画像を入れたときにあった方がいい気がする*/
-/*	max-width: 50vw;*/
+	max-width: 80vw;
 }
 
 /* SKILLSのJavaやOracle等に対してのボックス */
@@ -105,7 +139,7 @@ a {
 }
 .works a:hover {
 	color: #0bd;
-	translate: 10px;
+	translate: 20px;
 /*  transform: scale(1.1);*/
 }
 
@@ -129,7 +163,7 @@ footer {
 	text-align: center;
 	font-size: 0.8em;
 	color: #fff;
-	background-image: radial-gradient(circle, #cc0000, #9d001b, #6a071f, #380e18, #000000);
+	background-image: radial-gradient(circle, #80a491, #96bbb9, #bad0d8, #e0e6ee, #ffffff);
 	padding: 1rem 0;
 }
 
