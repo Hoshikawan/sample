@@ -74,7 +74,7 @@ background: #f8f8fb;
 	max-width: 18rem;
 	max-width: 100%;
 	object-fit: cover;
-/*	object-position: center;*/
+	object-position: center;
 	border-radius: 10px;
 }
 
