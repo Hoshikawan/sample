@@ -42,7 +42,9 @@ a {
 	padding: 0.5em 1em;
 }
 .main-nav a:hover {
-	color: #0bd;
+	background-image: radial-gradient(circle, #e0e6ee, #d7e0e9, #cddbe4, #c4d5de, #bad0d8);
+	color: #80a491;
+	transition: .3s;
 }
 
 /* main部分 */
